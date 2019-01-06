@@ -1,0 +1,24 @@
+{
+  "name": "formapp",
+  "version": "1.0.0",
+  "description": "first form app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "globefire",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "electron-reload": "^1.4.0",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0",
+    "randomstring": "^1.1.5",
+    "remote": "^0.2.6",
+    "tether": "^1.4.5"
+  }
+}
