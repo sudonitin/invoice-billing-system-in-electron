@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.css"">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+       function PopUp(data) {
+            var mywindow = window.open('','','left=0,top=0,width=950,height=600,toolbar=0,scrollbars=0,status=0,addressbar=0');
+
+            var is_chrome = Boolean(mywindow.chrome);
+            mywindow.document.write(data);
+            mywindow.document.close(); // necessary for IE >= 10 and necessary before onload for chrome
+
+            if (is_chrome) {
+                mywindow.onload = function() { // wait until all resources loaded 
+                    mywindow.focus(); // necessary for IE >= 10
+                    mywindow.print();  // change window to mywindow
+                    mywindow.close();// change window to mywindow
+                };
+            }
+            else {
+                mywindow.document.close(); // necessary for IE >= 10
+                mywindow.focus(); // necessary for IE >= 10
+                mywindow.print();
+                mywindow.close();
+            }
+
+            return true;
+        }
+    </script>
+    <title>M.S Enterprises</title>
+
+
+</head>
+
+<body>
+
+
+    <!--Supplier detials-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-light">
+                    <a href="#" class="navbar-brand">
+                        <img class="img-responsive" src="img/MSE.jpeg" alt="MSE">
+                        <div>
+                        <h3 class="msee">M.S Enterprises</h3>
+                        <p class="eng">ENGINEERS & CONTRACTORS</p>
+                        </div>
+                    </a>
+                    <h1 class="h1">PURCHASE ORDER SYSTEM</h1>
+                </nav>
+            </div>
+            <div class="col-md-6">
+                <h1 class="h2">Supplier Details :</h1><br>
+
+            </div><br>
+
+
+            <div class="col-md-12">
+
+              <form action="">
+                <div class="form-inline">
+                <div class="form-group row">
+                   <label class="vendor" for="inputlg">
+                        PO NO&nbsp :
+                   </label>
+                <div class="input-group row">
+                     <div class="input-group-addon">
+                            MSE/PO/
+                     </div>
+                     <span class="p18">/2018-2019
+                    <input class="form-control" id="inputlg" name="" type="text"/>
+                  </span>
+                </div>
+                </div>
+                <div class="form-group row">
+
+                    <label for="cat" class="pod">Purchase Order Date&nbsp: </label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group row">
+
+                    <label for="cat" class="pod">Invoice&nbsp: </label>
+                    <input type="text" class="form-control">
+
+                </div>
+          </div>
+              </form>
+
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="vendor" class="vendor">Vendor code&nbsp:</label>
+                        <input type="text" class="form-control vendor-input">
+
+                    </div>
+                    <div class="form-group row">
+
+                        <label for="cat" class="cts">Category of Supplier&nbsp: </label>
+                        <input type="text" class="form-control vendor-input">
+
+                    </div>
+                </div>
+             <!--Name of the supplier column -->
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="" class="basic">Name of Supplier&nbsp:</label>
+                        <input type="text" class="nfs">
+
+                    </div>
+
+
+                </div><br>
+
+               <!--Address column-->
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="" class="basic">Address&nbsp:</label>
+                        <textarea name="name" class="add2" rows="8" cols="80"></textarea>
+
+                    </div>
+
+
+                </div><br>
+                <!--Alias company column-->
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="" class="basic">Alias Company&nbsp:</label>
+                        <input type="text" class="alias">
+
+                    </div>
+
+
+                </div><br>
+
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="" class="basic">Supplier CONTACT PERSON&nbsp:</label>
+                        <input type="text" class="scp">
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="" class="supp">Supplier PAN NO&nbsp:</label>
+                        <input type="text" class="scp2">
+
+                    </div>
+
+                </div><br>
+
+                <div class="form-inline">
+                    <div class="form-group row">
+
+                        <label for="" class="basic">Supplier CONTACT NO&nbsp:</label>
+                        <input type="text" class="cnt">
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="" class="gst">Supplier GST NO&nbsp:</label>
+                        <input type="text" class="scp2">
+
+                    </div>
+
+                </div><br>
+                 <!--Site Details-->
+                  <h3 class="sitedet">Site Details&nbsp:</h3>
+
+                  <div class="form-inline">
+                      <div class="form-group row">
+
+                          <label for="" class="site">Site&nbsp:</label>
+                          <input type="text" class="cnt">
+
+                      </div>
+
+                      <div class="form-group row">
+
+                          <label for="" class="gst">Site Contact Person&nbsp:</label>
+                          <input type="text" class="scp2">
+
+                      </div>
+
+                      <div class="form-group row">
+
+                          <label for="" class="gst">Site Contact No&nbsp:</label>
+                          <input type="text" class="scp2">
+
+                      </div>
+
+
+                  </div><br>
+
+
+
+
+
+            </div>
+
+            <div class="col-md-12">
+              <h3 class="sitedet">PURCHASE ORDER DETAIL&nbsp:</h3><br>
+
+              <div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table table-bordered table-lg" id="tab_logic">
+                <thead>
+                    <tr >
+                        <th class="text-center">
+                            #
+                        </th>
+                        <th class="text-center">
+                            Description of Products
+                        </th>
+                        <th class="text-center">
+                            Qauntity
+                        </th>
+                        <th class="text-center">
+                            Rate
+                        </th>
+                        <th class="text-center">
+                            Unit
+                        </th>
+                        <th class="text-center">
+                            Amount
+                        </th>
+                        <th class="text-center">
+                            GST%
+                        </th>
+                        <th class="text-center">
+                          Total  Amount
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id='addr0'>
+                        <td>
+                        1
+                        </td>
+                        <td>
+                        <input type="text" name='user'  placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='qnt' placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='rate' placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='unit' placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='amt' placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='gst' placeholder='' class="form-control"/>
+                        </td>
+                        <td>
+                        <input type="text" name='tmt' placeholder='' class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr id='addr1'></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a id="add_row" class="btn btn-danger pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-danger">Delete Row</a>
+    </div><br>
+
+    <div class="form-inline">
+        <div class="form-group row">
+
+            <label for="" class="basic">Amount in Words&nbsp:</label>
+            <input type="text" class="cnt">
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="" class="gst">Amount in Figures&nbsp:</label>
+            <input type="text" class="scp2">
+
+        </div>
+
+    </div><br>
+
+    <!--Terms and condition-->
+
+       <h3 class="sitedet">TERMS AND CONDITIONS&nbsp:</h3><br>
+
+         <p class="tac">1.GST Tin No 27ALRPS0413RZZC (GST number must be mentioned on tax invoice).</p>
+          <p class="tac">2.The above rates are including. <input type="text"> </p>
+          <p class="tac">3.Billing Add: M/s  M.S.Enterprises, G-3, Sumer Nagar, Near Ajanta Party Hall, S.V.Road , Borivali– (West),<br>
+                         Mumbai‐ 400 092.</p>
+                         <!--paymentterms-->
+                         <div class="ptt">
+                         <div class="form-inline">
+                             <div class="form-group row">
+
+                                 <label for="" class="basic">4.Payment Terms&nbsp:</label>
+                                 <input type="text" class="cnt">
+
+                             </div>
+                         </div><br>
+                       </div>
+
+           <p class="tac">5.Attach copy of delivery challan along with bill. (Challan name  Bill name must be same).</p>
+           <p class="tac">6.If Transportation is done with own tempo/ trucks then please attach photo copy of RC book.</p>
+           <p class="tac">7.Attach declaration letter on letter head with bill. (Sign. Of bill  declaration must be same)</p>
+
+
+           <!--Other condition -->
+
+           <h3 class="sitedet">OTHER CONDITIONS&nbsp:</h3>
+            <textarea name="name" class="other" rows="3" cols="100"></textarea><br>
+
+            <div class="form-inline">
+                <div class="form-group row">
+
+                    <label for="" class="basic">Order Placed By&nbsp:</label>
+                    <input type="text" class="cnt">
+
+                </div>
+
+                <div class="form-group row">
+
+                    <label for="" class="gst">Order Confirmed By&nbsp:</label>
+                    <input type="text" class="scp2">
+
+                </div>
+
+            </div><br>
+
+            <div class="form-group">
+       <label class="col-md-4 control-label" for="singlebutton"></label>
+       <div class="col-md-4 center-block">
+          <button id="singlebutton" name="singlebutton"  role="button" class="btn  button ">
+              Create Invoice
+           </button>
+       </div>
+       </div>
+       <!--Temporary space-->
+      <br><br><br><br><br>
+
+
+     </div>   <!--3rd Last Div-->
+
+
+
+
+
+            </div> <!--Last Div-->
+
+        </div>  <!--Last Div-->
+
+
+
+
+
+
+
+
+
+
+        <!--Jquery css----------------------------------------------------------------------------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script>
+
+        $(document).ready(function(){
+      var i=1;
+     $("#add_row").click(function(){
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='user"+i+"' type='text' placeholder='' class='form-control input-md'  /></td><td><input  name='qnt"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input  name='rate"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input  name='unit"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input  name='amt"+i+"' type='text' placeholder=''  class='form-control input-md'></td><td><input name='gst"+i+"' type='text' placeholder='' class='form-control input-md'  /></td><td><input name='tmt"+i+"' type='text' placeholder='' class='form-control input-md'  /></td>");
+
+      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++;
+  });
+     $("#delete_row").click(function(){
+         if(i>1){
+         $("#addr"+(i-1)).html('');
+         i--;
+         }
+     });
+
+});
+
+
+        </script>
+
+</body>
+
+</html>
